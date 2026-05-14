@@ -80,13 +80,13 @@
 // ------------------------------------------------------------------------------------------------------------
 // |       |      |      |       |       |      |                |      |      |       |      |       |       |
 // |       | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
-// |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  | BKSPC |  DEL  |
+// |       |      | ALT  | CTRL  | SHIFT | CAPS |                | PGDN |   <- |   v   |  ->  | BKSPC |  DEL  |
 // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
 //                |      |       |       |      |      |  |      |      |      |       |      |
             bindings = <
 &trans     &trans       &trans       &trans       &trans       &trans                        &trans    &trans    &trans   &trans    &trans  &trans
 &trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                        &kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
-&trans     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                      &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp BSPC &kp DEL
+&trans     &trans       &kp LALT     &kp LCTRL    &kp LSHFT    &kp CLCK                      &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp BSPC &kp DEL
 &trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans        &trans  &trans  &trans    &trans    &trans   &trans    &trans  &trans
                         &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans    &trans   &trans
             >;
