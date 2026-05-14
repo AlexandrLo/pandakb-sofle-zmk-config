@@ -27,6 +27,19 @@
         };
     };
 
+    macros {
+        lang_switch_macro: lang_switch_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp SPACE>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -34,7 +47,7 @@
             timeout-ms = <150>;
             key-positions = <54 55>;
             layers = <BASE>;
-            bindings = <&kp LC(SPACE)>;
+            bindings = <&lang_switch_macro>;
         };
     };
 
