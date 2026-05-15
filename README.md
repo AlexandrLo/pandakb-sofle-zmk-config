@@ -14,3 +14,7 @@ Main differences:
 * The right encoder now works as a mouse wheel.
 * The left encoder controls volume.
 * The base layer is adapted to my personal layout.
+
+## Keymap
+
+![keymap-drawer-demo-corne](keymap-drawer/Sofle.svg)
