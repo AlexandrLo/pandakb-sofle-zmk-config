@@ -142,9 +142,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Page Up
-  - {t: ▽, type: trans}
+  - $$mdi:backspace-outline$$
   - ↑
-  - {t: ▽, type: trans}
+  - ⌦
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -157,8 +157,8 @@ layers:
   - ←
   - ↓
   - →
-  - $$mdi:backspace-outline$$
-  - ⌦
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Ctl+Z
   - CUT
