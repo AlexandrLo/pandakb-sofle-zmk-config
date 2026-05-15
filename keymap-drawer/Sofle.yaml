@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: Sofle}
 layers:
-  default:
+  base:
   - Esc
   - '1'
   - '2'
@@ -247,4 +247,4 @@ layers:
 combos:
 - p: [54, 55]
   k: '&lang_switch_macro'
-  l: [default]
+  l: [base]
