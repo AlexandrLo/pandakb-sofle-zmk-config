@@ -130,7 +130,7 @@
                                   &none           &none           &none           &none            &none  &none  &none &none &none &none
             >;
         };
-лл
+
         extra1 {
             status = "reserved";
         };
