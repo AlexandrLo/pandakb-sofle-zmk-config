@@ -99,15 +99,15 @@
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       |      |      |       |       |      |                | PP   | PREV | NEXT  |      |       |       |
-// |       | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
-// |       |      | ALT  | CTRL  | SHIFT | CAPS |                | PGDN |   <- |   v   |  ->  | BKSPC |  DEL  |
-// |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
-//                |      |       |       |      |      |  | A+ENT |      |      |       |      |
+// |       |      |      |       |       |      |                 | PP   | PREV  | NEXT  |      |       |       |
+// |       | INS  | PSCR | GUI   |       |      |                 | PGUP | BKSPC |   ^   | DEL  |       |       |
+// |       |      | ALT  | CTRL  | SHIFT | CAPS |                 | PGDN |   <-  |   v   |  ->  |       |       |
+// |       | UNDO | CUT  | COPY  | PASTE |      |      |  |       |      |       |       |      |       |       |
+//                |      |       |       |      |      |  | A+ENT |      |       |       |      |
             bindings = <
 &trans     &trans     &trans     &trans      &trans      &trans                       &kp C_PP   &kp C_PREV &kp C_NEXT &trans    &trans   &trans
-&trans     &kp INS    &kp PSCRN  &kp K_CMENU &trans      &trans                       &kp PG_UP  &trans     &kp UP     &trans    &trans   &trans
-&trans     &trans     &kp LALT   &kp LCTRL   &kp LSHFT   &kp CLCK                     &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT &kp BSPC &kp DEL
+&trans     &kp INS    &kp PSCRN  &kp K_CMENU &trans      &trans                       &kp PG_UP  &kp BSPC   &kp UP     &kp DEL   &trans   &trans
+&trans     &trans     &kp LALT   &kp LCTRL   &kp LSHFT   &kp CLCK                     &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT &trans   &trans
 &trans     &kp LC(Z)  &kp K_CUT  &kp K_COPY  &kp K_PASTE &trans   &trans  &trans      &trans     &trans     &trans     &trans    &trans   &trans
                       &trans     &trans      &trans      &trans   &trans  &kp LA(RET) &trans     &trans     &trans     &trans
             >;
