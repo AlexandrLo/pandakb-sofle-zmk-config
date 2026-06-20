@@ -349,7 +349,7 @@ rect.held, rect.combo.held {
 </g>
 <g transform="translate(841, 62)" class="key keypos-11">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#mdi:backspace-outline" xlink:href="#mdi:backspace-outline" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:backspace-outline"/>
+<text x="0" y="0" class="key tap">]</text>
 </g>
 <g transform="translate(28, 118)" class="key keypos-12">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -503,7 +503,8 @@ rect.held, rect.combo.held {
 </g>
 <g transform="translate(841, 230)" class="key keypos-49">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#mdi:apple-keyboard-shift" xlink:href="#mdi:apple-keyboard-shift" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:apple-keyboard-shift"/>
+<text x="0" y="0" class="key tap">|</text>
+<use href="#mdi:apple-keyboard-shift" xlink:href="#mdi:apple-keyboard-shift" x="-8" y="9" height="15" width="15.0" class="key hold glyph mdi:apple-keyboard-shift"/>
 </g>
 <g transform="translate(140, 260)" class="key keypos-50">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -519,8 +520,9 @@ rect.held, rect.combo.held {
 </g>
 <g transform="translate(317, 274) rotate(23.0)" class="key keypos-53">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">␣</text>
 <a href="#sign">
-<text x="0" y="0" class="key tap layer-activator">sign</text>
+<text x="0" y="24" class="key hold layer-activator">sign</text>
 </a></g>
 <g transform="translate(379, 288) rotate(30.0)" class="key keypos-54">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
@@ -532,8 +534,9 @@ rect.held, rect.combo.held {
 </g>
 <g transform="translate(552, 274) rotate(-23.0)" class="key keypos-56">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<use href="#mdi:backspace-outline" xlink:href="#mdi:backspace-outline" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:backspace-outline"/>
 <a href="#edit">
-<text x="0" y="0" class="key tap layer-activator">edit</text>
+<text x="0" y="24" class="key hold layer-activator">edit</text>
 </a></g>
 <g transform="translate(617, 260)" class="key keypos-57">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>

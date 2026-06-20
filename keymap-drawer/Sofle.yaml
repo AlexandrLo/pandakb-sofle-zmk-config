@@ -12,7 +12,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - $$mdi:backspace-outline$$
+  - ']'
   - ↹
   - Q
   - W
@@ -50,14 +50,14 @@ layers:
   - ','
   - .
   - /
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '|', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
-  - sign
+  - {t: ␣, h: sign}
   - ␣
   - ⏎
-  - edit
+  - {t: '$$mdi:backspace-outline$$', h: edit}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
