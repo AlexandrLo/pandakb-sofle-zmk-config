@@ -18,3 +18,24 @@ Main differences:
 ## Keymap
 
 ![keymap-drawer-demo-corne](keymap-drawer/Sofle.svg)
+
+## Prospector Dongle Variant
+
+Alongside the standalone `Sofle_L`/`Sofle_R` build, this repo also builds a
+[Prospector](https://github.com/carrefinho/prospector) dongle variant where
+the dongle (Seeed XIAO nRF52840 + round LCD) is the BLE central and both
+halves are peripherals with no OLED:
+
+* `Sofle_dongle_L` / `Sofle_dongle_R` — flash to each half (`nice_nano_v2`).
+* `Sofle_dongle_prospector` — flash to the Prospector dongle
+  (`seeeduino_xiao_ble`); shows layer, battery, and connection status on
+  its screen.
+* A separate `settings_reset` build is provided for the dongle board so its
+  BLE bonds can be reset independently of the halves.
+
+After flashing, pair the **left half first, then the right half** — the
+Prospector battery widget orders itself by pairing order.
+
+Both build variants can coexist; you choose which firmware to flash per
+device. Keymap edits currently need to be applied to both
+`config/Sofle.keymap` and `config/Sofle_dongle.keymap` (see `AGENTS.md`).
