@@ -1,0 +1,19 @@
+# Copyright (c) 2020 Pete Johanson, Ryan Cross
+# SPDX-License-Identifier: MIT
+
+if SHIELD_SOFLE_DONGLE_CENTRAL
+
+config ZMK_KEYBOARD_NAME
+    default "Sofle"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_SOFLE_DONGLE_CENTRAL || SHIELD_SOFLE_DONGLE_LEFT || SHIELD_SOFLE_DONGLE_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif

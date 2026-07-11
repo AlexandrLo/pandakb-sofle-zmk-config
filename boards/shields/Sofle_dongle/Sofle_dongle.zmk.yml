@@ -1,0 +1,17 @@
+file_format: "1"
+id: Sofle_dongle
+name: Sofle_dongle
+type: shield
+url: https://pandakb.com
+requires: [nice!nano]
+exposes: []
+features:
+  - keys
+  - studio
+  - dongle
+  - underglow
+  - encoder
+siblings:
+  - Sofle_dongle_central
+  - Sofle_dongle_left
+  - Sofle_dongle_right
