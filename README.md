@@ -37,5 +37,5 @@ After flashing, pair the **left half first, then the right half** — the
 Prospector battery widget orders itself by pairing order.
 
 Both build variants can coexist; you choose which firmware to flash per
-device. Keymap edits currently need to be applied to both
-`config/Sofle.keymap` and `config/Sofle_dongle.keymap` (see `AGENTS.md`).
+device. `config/Sofle_dongle.keymap` is a symlink to `config/Sofle.keymap`,
+so keymap edits apply to both automatically.

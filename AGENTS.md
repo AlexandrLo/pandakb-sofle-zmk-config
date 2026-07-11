@@ -30,7 +30,7 @@ The build workflow delegates to `zmkfirmware/zmk/.github/workflows/build-user-co
 
 There are two `Sofle.keymap` files. `config/Sofle.keymap` is the active personal layout used by builds; `boards/shields/Sofle/Sofle.keymap` is the shield default/example. Do not update the shield default for ordinary personal keymap edits unless explicitly requested.
 
-There is also `config/Sofle_dongle.keymap`, a plain copy of `config/Sofle.keymap` used by the `Sofle_dongle_central`/`_left`/`_right` shields. Any layer/combo/macro edit to `config/Sofle.keymap` must be mirrored into `config/Sofle_dongle.keymap` by hand — they are not linked.
+There is also `config/Sofle_dongle.keymap`, a symlink to `config/Sofle.keymap` used by the `Sofle_dongle_central`/`_left`/`_right` shields. Edits to `config/Sofle.keymap` apply automatically — do not replace the symlink with a real file.
 
 ## Keymap Constraints
 
