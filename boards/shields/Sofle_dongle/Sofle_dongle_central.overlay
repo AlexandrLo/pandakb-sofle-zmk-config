@@ -5,11 +5,13 @@
  */
 
 #include "Sofle_dongle-layouts.dtsi"
+#include <dt-bindings/led/led.h>
 
 / {
     chosen {
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &layout_0;
+        zmk,underglow = &led_strip;
     };
 
     mock_kscan: kscan_mock {
@@ -17,5 +19,60 @@
         columns = <0>;
         rows = <0>;
         events = <0>;
+    };
+
+    sensor_stub_left: sensor_stub_left {
+        status = "disabled";
+    };
+
+    sensor_stub_right: sensor_stub_right {
+        status = "disabled";
+    };
+
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&sensor_stub_left &sensor_stub_right>;
+        triggers-per-rotation = <20>;
+    };
+};
+
+// Unused SPI instance/pin (D0, the only header pin prospector_adapter
+// doesn't already claim) wired to nothing: CONFIG_ZMK_RGB_UNDERGLOW
+// requires a real zmk,underglow chosen node to compile at all, even
+// though the dongle has no actual LED strip -- this satisfies that
+// requirement so RGB_TOG/HUE/EFF behaviors (BEHAVIOR_LOCALITY_GLOBAL)
+// still get forwarded to the halves' real LED strips.
+&pinctrl {
+    spi1_default: spi1_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 2)>;
+        };
+    };
+
+    spi1_sleep: spi1_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 2)>;
+            low-power-enable;
+        };
+    };
+};
+
+&spi1 {
+    compatible = "nordic,nrf-spim";
+    status = "okay";
+
+    pinctrl-0 = <&spi1_default>;
+    pinctrl-1 = <&spi1_sleep>;
+    pinctrl-names = "default", "sleep";
+
+    led_strip: ws2812@0 {
+        compatible = "worldsemi,ws2812-spi";
+        reg = <0>;
+        spi-max-frequency = <4000000>;
+
+        chain-length = <1>;
+        spi-one-frame = <0x70>;
+        spi-zero-frame = <0x40>;
+        color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
     };
 };
