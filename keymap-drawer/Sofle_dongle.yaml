@@ -279,8 +279,8 @@ layers:
   - ←
   - ↓
   - →
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Home
+  - End
   - {t: ▽, type: trans}
   - Ctl+Z
   - CUT
